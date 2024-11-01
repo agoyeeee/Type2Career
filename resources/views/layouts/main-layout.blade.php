@@ -35,11 +35,11 @@
             <!-- End of Main Content -->
 
 
+            <!-- Footer -->
+            @include('template.footer')
+            <!-- End of Footer -->
         </div>
         <!-- End of Content Wrapper -->
-        <!-- Footer -->
-        @include('template.footer')
-        <!-- End of Footer -->
 
     </div>
     <!-- End of Page Wrapper -->
