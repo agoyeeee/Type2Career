@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-
     <title>SB Admin 2 - Blank</title>
     @include('template.head')
-
 </head>
 
 <body id="page-top">
@@ -25,30 +23,23 @@
 
                 <!-- Topbar -->
                 @include('template.navbar')
-
-
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-
+                    @yield('content')
                 </div>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            @include('template.footer')
-
-
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
+        <!-- Footer -->
+        @include('template.footer')
+        <!-- End of Footer -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -77,6 +68,7 @@
             </div>
         </div>
     </div>
+
     @include('template.script')
 </body>
 
