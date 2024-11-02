@@ -24,7 +24,6 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('question') }}">
-            aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-question"></i>
             <span>Question</span>
         </a>
