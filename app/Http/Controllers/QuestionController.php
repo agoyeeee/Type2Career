@@ -7,61 +7,62 @@ use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
+    /**
+     * Menampilkan daftar question.
+     */
     public function index()
     {
-        // Mengambil semua data pertanyaan dari database
         $questions = Question::all();
-        return view('question', compact('questions'));
+        return view('questions', compact('questions'));
     }
 
+    /**
+     * Menyimpan pertanyaan baru ke dalam database.
+     */
     public function store(Request $request)
     {
-        // Validasi data input
         $request->validate([
-            'pertanyaan' => 'required',
-            'dimensi' => 'required',
+            'pertanyaan' => 'required|string',
+            'dimensi' => 'required|string',
         ]);
 
-        // Menyimpan data pertanyaan baru ke database
-        Question::create([
-            'pertanyaan' => $request->pertanyaan,
-            'dimensi' => $request->dimensi,
-        ]);
+        Question::create($request->all());
 
-        return redirect()->route('question')->with('success', 'Pertanyaan berhasil ditambahkan.');
+        return redirect()->route('question.index')->with('success', 'Pertanyaan berhasil ditambahkan.');
     }
 
-    public function edit($id)
+    /**
+     * Menampilkan form edit pertanyaan di modal (data dikirim melalui JavaScript).
+     */
+    public function edit(Question $question)
     {
-        // Mengambil data pertanyaan berdasarkan id untuk diedit
-        $question = Question::findOrFail($id);
-        return view('questions', compact('question'));
+        return response()->json($question);
     }
 
+    /**
+     * Memperbarui pertanyaan di database.
+     */
     public function update(Request $request, $id)
     {
-        // Validasi data input
         $request->validate([
-            'pertanyaan' => 'required',
-            'dimensi' => 'required',
+            'pertanyaan' => 'required|string',
+            'dimensi' => 'required|string',
         ]);
 
-        // Update data pertanyaan di database
         $question = Question::findOrFail($id);
-        $question->update([
-            'pertanyaan' => $request->pertanyaan,
-            'dimensi' => $request->dimensi,
-        ]);
+        $question->update($request->all());
 
-        return redirect()->route('question')->with('success', 'Pertanyaan berhasil diperbarui.');
+        return redirect()->route('question.index')->with('success', 'Pertanyaan berhasil diperbarui.');
     }
 
+    /**
+     * Menghapus pertanyaan dari database.
+     */
     public function destroy($id)
     {
-        // Menghapus data pertanyaan dari database
         $question = Question::findOrFail($id);
         $question->delete();
 
-        return redirect()->route('question')->with('success', 'Pertanyaan berhasil dihapus.');
+        return redirect()->route('question.index')->with('success', 'Pertanyaan berhasil dihapus.');
     }
 }

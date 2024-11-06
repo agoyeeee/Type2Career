@@ -15,11 +15,22 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-
         User::create([
-            'name' => 'Test User',
+            'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('admin')
+            'password' => Hash::make('123'),
+            'role' => 'admin',
         ]);
+        User::create([
+            'name' => 'yoga',
+            'email' => 'yoga@gmail.com',
+            'password' => Hash::make('123'),
+            'role' => 'user',
+        ]);
+        {
+            $this->call(MBTITypeSeeder::class);
+            $this->call(JobRecommendationSeeder::class);
+        }
+
     }
 }

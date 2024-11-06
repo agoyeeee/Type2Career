@@ -8,34 +8,63 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    /**
+     * Menampilkan form login.
+     *
+     * @return \Illuminate\View\View
+     */
     public function showLoginForm()
     {
-        return view('login'); // Pastikan ini sesuai dengan nama tampilan Anda
+        return view('Auth/Login');
     }
 
+    /**
+     * Memproses login pengguna.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function login(Request $request)
     {
-        // Validasi input
+        // Validasi input login
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6',
         ]);
 
-        // Cek kredensial
+        // Coba autentikasi pengguna
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Jika login berhasil, redirect ke halaman yang diinginkan
-            return redirect()->intended('dashboard'); // Ganti 'dashboard' dengan rute yang sesuai
+            $request->session()->regenerate();
+
+            $user = Auth::user();
+            $role = $user->role;
+
+            // Arahkan berdasarkan role pengguna
+            if ($role === 'admin') {
+                return redirect()->route('dashboard'); // arahkan ke dashboard admin
+            } else {
+                return redirect()->route('landing'); // arahkan ke landing page untuk user
+            }
         }
 
-        // Jika login gagal, kembali ke form login dengan pesan error
+        // Jika gagal login, kembali dengan pesan error
         return back()->withErrors([
             'email' => 'Email atau password salah.',
         ]);
     }
 
-    public function logout()
+    /**
+     * Logout pengguna dan hapus sesi.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/login'); // Ganti dengan rute yang sesuai
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

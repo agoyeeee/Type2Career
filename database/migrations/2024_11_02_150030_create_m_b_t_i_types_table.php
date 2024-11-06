@@ -9,22 +9,21 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('questions', function (Blueprint $table) {
+        Schema::create('mbti_types', function (Blueprint $table) {
             $table->id();
-            $table->string('pertanyaan');
-            $table->string('dimensi');
+            $table->string('type_code', 4); // VARCHAR(4) untuk kode MBTI seperti "INTJ"
+            $table->text('description'); // Deskripsi singkat tipe MBTI
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('questions');
+        Schema::dropIfExists('m_b_t_i_types');
     }
 };

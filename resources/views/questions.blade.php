@@ -10,7 +10,7 @@
             Tambah Pertanyaan
         </div>
         <div class="card-body">
-            <form action="{{ route('questions.store') }}" method="POST">
+            <form action="{{ route('question.store') }}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="pertanyaan">Pertanyaan</label>
@@ -18,10 +18,16 @@
                         placeholder="Masukkan pertanyaan" required>
                 </div>
                 <div class="form-group">
-                    <label for="dimensi">Dimensi</label>
-                    <input type="text" name="dimensi" class="form-control" id="dimensi" placeholder="Masukkan dimensi"
-                        required>
+                    <label for="dimensi">Dimensi Kepribadian MBTI</label>
+                    <select name="dimensi" class="form-control" id="dimensi" required>
+                        <option value="" disabled selected>Pilih dimensi kepribadian</option>
+                        <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
+                        <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
+                        <option value="Thinking (T) - Feeling (F)">Thinking (T) / Feeling (F)</option>
+                        <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
+                    </select>
                 </div>
+
                 <button type="submit" class="btn btn-primary mt-3">Simpan</button>
             </form>
         </div>
@@ -45,8 +51,8 @@
                 <td>{{ $question->dimensi }}</td>
                 <td>
                     <button type="button" class="btn btn-info btn-sm"
-                        onclick="openEditModal({{ $question->id }}, '{{ $question->pertanyaan }}', '{{ $question->dimensi }}')">Edit</button>
-                    <form action="{{ route('questions.destroy', $question->id) }}" method="POST"
+                        onclick="openEditModal({{ $question->id }}, '{{ addslashes($question->pertanyaan) }}', '{{ addslashes($question->dimensi) }}')">Edit</button>
+                    <form action="{{ route('question.destroy', $question->id) }}" method="POST"
                         style="display:inline-block;">
                         @csrf
                         @method('DELETE')
@@ -78,7 +84,13 @@
                         </div>
                         <div class="form-group">
                             <label for="editDimensi">Dimensi</label>
-                            <input type="text" name="dimensi" class="form-control" id="editDimensi" required>
+                            <select name="dimensi" class="form-control" id="editDimensi" required>
+                                <option value="" disabled selected>Pilih dimensi kepribadian</option>
+                                <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
+                                <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
+                                <option value="Thinking (T) - Feeling (F)">Thinking (T) / Feeling (F)</option>
+                                <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -100,10 +112,9 @@
         document.getElementById('editDimensi').value = dimensi;
 
         // Mengatur action form untuk mengarah ke URL update yang sesuai
-        document.getElementById('editForm').action = `/questions/${id}`;
+        document.getElementById('editForm').action = `{{ url('/questions') }}/${id}`;
 
         // Menampilkan modal edit
         $('#editPertanyaanModal').modal('show');
     }
-
 </script>
