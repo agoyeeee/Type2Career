@@ -12,7 +12,7 @@ class JobController extends Controller
     {
         $jobs = JobRecommendation::with('mbtiType')->get(); // Eager load relasi mbtiType
         $mbtiTypes = MBTIType::all();
-        return view('job', compact('job', 'mbtiTypes'));
+        return view('job', compact('jobs', 'mbtiTypes'));
     }
 
     public function store(Request $request)
@@ -29,7 +29,7 @@ class JobController extends Controller
             'job_description' => $request->job_description,
         ]);
 
-        return redirect()->route('job')->with('success', 'Rekomendasi pekerjaan berhasil ditambahkan.');
+        return redirect()->route('job.index')->with('success', 'Rekomendasi pekerjaan berhasil ditambahkan.');
     }
 
 
@@ -49,7 +49,7 @@ class JobController extends Controller
             'job_description' => $request->job_description,
         ]);
 
-        return redirect()->route('job')->with('success', 'Rekomendasi pekerjaan berhasil diperbarui.');
+        return redirect()->route('job.index')->with('success', 'Rekomendasi pekerjaan berhasil diperbarui.');
     }
 
     public function destroy($id)
@@ -57,6 +57,6 @@ class JobController extends Controller
         $job = JobRecommendation::findOrFail($id);
         $job->delete();
 
-        return redirect()->route('job')->with('success', 'Rekomendasi pekerjaan berhasil dihapus.');
+        return redirect()->route('job.index')->with('success', 'Rekomendasi pekerjaan berhasil dihapus.');
     }
 }

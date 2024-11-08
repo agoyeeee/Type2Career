@@ -66,7 +66,7 @@
                         <td>{{ $job->job_title }}</td>
                         <td>{{ $job->job_description }}</td>
                         <td>
-                            <a href="{{ route('job.edit', $job->id) }}" class="btn btn-info btn-sm">Edit</a>
+                            <a href="{{ route('job.update', $job->id) }}" class="btn btn-info btn-sm">Edit</a>
                             <form action="{{ route('job.destroy', $job->id) }}" method="POST"
                                 style="display:inline-block;">
                                 @csrf

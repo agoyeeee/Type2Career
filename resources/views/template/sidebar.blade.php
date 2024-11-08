@@ -23,7 +23,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('questions') }}">
+        <a class="nav-link" href="{{ route('question.index') }}">
             <i class="fas fa-fw fa-question"></i>
             <span>Question</span>
         </a>
@@ -33,7 +33,7 @@
     <hr class="sidebar-divider">
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('job') }}">
+        <a class="nav-link" href="{{ route('job.index') }}">
             <i class="fas fa-fw fa-question"></i>
             <span>Job Recomend</span>
         </a>

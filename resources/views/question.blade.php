@@ -23,11 +23,10 @@
                         <option value="" disabled selected>Pilih dimensi kepribadian</option>
                         <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
                         <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
-                        <option value="Thinking (T) - Feeling (F)">Thinking (T) / Feeling (F)</option>
+                        <option value="Thinking (T)- Feeling (F)">Thinking (T) / Feeling (F)</option>
                         <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
                     </select>
                 </div>
-
                 <button type="submit" class="btn btn-primary mt-3">Simpan</button>
             </form>
         </div>
@@ -51,9 +50,9 @@
                 <td>{{ $question->dimensi }}</td>
                 <td>
                     <button type="button" class="btn btn-info btn-sm"
-                        onclick="openEditModal({{ $question->id }}, '{{ addslashes($question->pertanyaan) }}', '{{ addslashes($question->dimensi) }}')">Edit</button>
+                        onclick="openEditModal({{ $question->id }}, '{{ $question->pertanyaan }}', '{{ $question->dimensi }}')">Edit</button>
                     <form action="{{ route('question.destroy', $question->id) }}" method="POST"
-                        style="display:inline-block;">
+                        style="display:inline-block;" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger btn-sm" type="submit">Hapus</button>
@@ -63,6 +62,7 @@
             @endforeach
         </tbody>
     </table>
+
     <!-- Modal Edit Pertanyaan -->
     <div class="modal fade" id="editPertanyaanModal" tabindex="-1" aria-labelledby="editPertanyaanModalLabel"
         aria-hidden="true">
@@ -85,10 +85,9 @@
                         <div class="form-group">
                             <label for="editDimensi">Dimensi</label>
                             <select name="dimensi" class="form-control" id="editDimensi" required>
-                                <option value="" disabled selected>Pilih dimensi kepribadian</option>
                                 <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
                                 <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
-                                <option value="Thinking (T) - Feeling (F)">Thinking (T) / Feeling (F)</option>
+                                <option value="Thinking (T)- Feeling (F)">Thinking (T) / Feeling (F)</option>
                                 <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
                             </select>
                         </div>
@@ -101,20 +100,16 @@
             </div>
         </div>
     </div>
-
 </div>
 @endsection
 
+@section('scripts')
 <script>
     function openEditModal(id, pertanyaan, dimensi) {
-        // Mengisi input form dengan data yang akan diedit
         document.getElementById('editPertanyaan').value = pertanyaan;
         document.getElementById('editDimensi').value = dimensi;
-
-        // Mengatur action form untuk mengarah ke URL update yang sesuai
-        document.getElementById('editForm').action = `{{ url('/questions') }}/${id}`;
-
-        // Menampilkan modal edit
+        document.getElementById('editForm').action = `/question/${id}`;
         $('#editPertanyaanModal').modal('show');
     }
 </script>
+@endsection

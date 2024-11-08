@@ -1,111 +1,51 @@
-<!-- resources/views/landing/landing.blade.php -->
+@extends('layouts.landing-layout')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Type2Career</title>
-    <!-- Link to your CSS (Bootstrap or custom styles) -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Type2Career</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white" href="{{ route('login') }}">Get Started</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+@section('content')
 
-    <!-- Hero Section -->
-    <section class="hero bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Discover Your Personality Type</h1>
-            <p class="lead">Find the best career path based on your personality.</p>
-            <a href="{{ route('register') }}" class="btn btn-light btn-lg mt-3">Get Started</a>
-        </div>
-    </section>
+<body class="bg-black text-white min-h-screen flex flex-col">
+    <!-- Main Content -->
+    <div class="flex-grow flex items-center justify-center relative">
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-radial from-transparent via-gray-800 to-black"></div>
 
-    <!-- Features Section -->
-    <section id="features" class="features py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Features</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-brain fa-3x mb-3"></i>
-                    <h3>Personality Test</h3>
-                    <p>Understand your personality type through a comprehensive assessment.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-briefcase fa-3x mb-3"></i>
-                    <h3>Career Matching</h3>
-                    <p>Explore career paths that align with your personality and strengths.</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-users fa-3x mb-3"></i>
-                    <h3>Community Support</h3>
-                    <p>Join a community of like-minded individuals for growth and support.</p>
-                </div>
+        <!-- Left and Right Decorative Images -->
+        <img src="{{ asset('assets/Cube8.png') }}"
+            alt="Left Decorative Image"
+            class="absolute top-1/3 left-5 w-150 h-150 transform -translate-y-1/2">
+        <img src="{{ asset('assets/Cube4.png') }}"
+            alt="Right Decorative Image"
+            class="absolute top-1/3 right-5 w-150 h-150 transform -translate-y-1/2">
+
+        <!-- Central Content -->
+        <div class="relative text-center max-w-2xl p-8 text-gray-300">
+            <!-- T2C Title -->
+            <div class="flex justify-center space-x-2 text-6xl font-extrabold text-white mb-8">
+                <span>T</span>
+                <span>2</span>
+                <span>C</span>
             </div>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">What Our Users Say</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">This platform helped me understand my personality and find the perfect career path!</p>
-                        <footer class="blockquote-footer">Alex, Software Engineer</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-6">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">A valuable resource for anyone seeking guidance in their career journey.</p>
-                        <footer class="blockquote-footer">Sarah, Marketing Specialist</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Description -->
+            <p class="text-lg leading-relaxed text-gray-400 mb-8">
+                Connect your MBTI personality type with a suitable career. Take the test,
+                discover your strengths, and get the right job recommendations. Start a
+                career journey that matches your potential today!
+            </p>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta text-center py-5">
-        <div class="container">
-            <h2>Ready to Discover Your True Potential?</h2>
-            <p>Sign up now and begin your journey!</p>
-            <a href="{{ route('register') }}" class="btn btn-primary btn-lg">Sign Up</a>
+            <!-- Take Test Button -->
+            <a href="#"
+                class="inline-block px-8 py-3 text-lg font-semibold text-white bg-gray-700 rounded-md hover:bg-gray-600 transition-transform transform hover:scale-105">Take
+                Test</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Type2Career. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="fixed bottom-5 right-5 bg-gray-700 p-2 rounded-full text-white" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-    <!-- Optional JavaScript for Bootstrap (if using Bootstrap) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tailwind CSS for icons and script files -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
-</html>
+
+@endsection
