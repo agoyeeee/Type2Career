@@ -12,10 +12,11 @@
     >
       <div class="text-2xl font-bold uppercase">TYPE2CAREER</div>
       <div class="flex space-x-5">
-        <a href="#" class="text-gray-400 hover:text-white text-lg">Home</a>
-        <a href="#" class="text-gray-400 hover:text-white text-lg">Career Insight</a>
-        <a href="#" class="text-gray-400 hover:text-white text-lg">Test</a>
-        <a href="#" class="text-gray-400 hover:text-white text-lg">About Us</a>
+        <a class="nav-link" href="{{ route('job.index') }}">
+        <a href="{{ route('landing') }}" class="text-gray-400 hover:text-white text-lg">Home</a>
+        <a href="{{ route('career') }}" class="text-gray-400 hover:text-white text-lg">Career Insight</a>
+        <a href="{{ route('test') }}" class="text-gray-400 hover:text-white text-lg">Test</a>
+        <a href="{{ route('about') }}" class="text-gray-400 hover:text-white text-lg">About Us</a>
       </div>
       <a
         href="#"
