@@ -8,21 +8,13 @@
         <!-- Background Gradient -->
         <div class="absolute inset-0 bg-gradient-radial from-transparent via-gray-800 to-black"></div>
 
-        <!-- Left and Right Decorative Images -->
-        <img src="{{ asset('assets/Cube8.png') }}"
-            alt="Left Decorative Image"
-            class="absolute top-1/3 left-5 w-150 h-150 transform -translate-y-1/2">
-        <img src="{{ asset('assets/Cube4.png') }}"
-            alt="Right Decorative Image"
-            class="absolute top-1/3 right-5 w-150 h-150 transform -translate-y-1/2">
-
         <!-- Central Content -->
         <div class="relative text-center max-w-2xl p-8 text-gray-300">
             <!-- T2C Title -->
-            <div class="flex justify-center space-x-2 text-6xl font-extrabold text-white mb-8">
-                <span>T</span>
-                <span>2</span>
-                <span>C</span>
+            <div class="flex justify-center space-x-2 text-8xl font-extrabold text-white mb-20">
+                <span class="px-5">T</span>
+                <span class="px-5 text-blue-400">2</span>
+                <span class="px-5">C</span>
             </div>
 
             <!-- Description -->
@@ -33,9 +25,10 @@
             </p>
 
             <!-- Take Test Button -->
-            <a href="#"
-                class="inline-block px-8 py-3 text-lg font-semibold text-white bg-gray-700 rounded-md hover:bg-gray-600 transition-transform transform hover:scale-105">Take
-                Test</a>
+            <a href="{{ route('test') }}"
+                class="inline-block px-4 py-2 text-lg mt-5 font-semibold text-white rounded-md transition ease-in-out delay-150 bg-blue-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+                Take Test
+            </a>
         </div>
     </div>
 
@@ -43,9 +36,6 @@
     <a class="fixed bottom-5 right-5 bg-gray-700 p-2 rounded-full text-white" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Tailwind CSS for icons and script files -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 
 @endsection

@@ -34,8 +34,18 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('job.index') }}">
-            <i class="fas fa-fw fa-question"></i>
+            <i class="fa fa-briefcase"></i>
             <span>Job Recomend</span>
+        </a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('job.index') }}">
+            <i class="fas fa-user"></i>
+            <span>User</span>
         </a>
     </li>
 

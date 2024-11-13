@@ -3,7 +3,7 @@
 @section('content')
 <!-- About Section -->
     <section class="flex flex-col items-center p-5 max-w-5xl">
-      <h2 class="text-4xl font-bold uppercase mb-5 text-center">About Us</h2>
+      <h1 class="text-5xl font-bold uppercase mb-5 text-center">About Us</h1>
       <p class="text-gray-400 text-lg leading-relaxed text-center max-w-3xl mb-10">
         MBCR (Myers-Briggs Career Recommendation) hadir untuk membantu Anda
         menemukan karir yang sesuai dengan kepribadian Anda melalui tes
@@ -18,7 +18,7 @@
       </p>
 
       <!-- Team Section -->
-      <h3 class="text-pink-400 uppercase text-2xl font-bold my-8">Our Team</h3>
+      <h3 class="text-pink-400 uppercase text-2xl font-bold my-8 mt-20">Our Team</h3>
       <div class="flex flex-wrap gap-6 justify-center max-w-3xl">
         <!-- Team Member Card -->
         <div class="bg-gray-900 shadow-lg rounded-lg p-5 flex flex-col items-center w-48 text-center">

@@ -4,8 +4,8 @@
 
 <body class="bg-black text-white flex flex-col items-center p-5 relative">
     <!-- Main Content -->
-    <div class="text-center max-w-4xl mt-8">
-        <h1 class="text-5xl font-extrabold uppercase text-pink-300 mb-5">Career Insights</h1>
+    <div class="text-center max-w-4xl mt-20">
+        <h1 class="text-5xl font-bold uppercase mb-5">Career <span class="text-pink-300">Insight</span></h1>
         <p class="text-lg text-gray-400 leading-relaxed mb-12">
             Selamat datang di Career Insights, tempat di mana Anda dapat menemukan panduan karier yang tepat berdasarkan
             tipe kepribadian MBTI Anda. Di sini, kami menyediakan berbagai artikel, tips, dan sumber daya yang dirancang
@@ -14,7 +14,7 @@
         </p>
 
         <div>
-        <div class="bg-gray-900 p-8 rounded-lg shadow-lg w-full">
+        <div class="bg-gray-900 p-8 rounded-lg shadow-lg w-full mt-60">
             <div class="space-y-16">
 
                 <!-- Step 1 -->
