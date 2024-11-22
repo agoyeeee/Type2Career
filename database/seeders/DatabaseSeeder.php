@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
         {
             $this->call(MBTITypeSeeder::class);
             $this->call(JobRecommendationSeeder::class);
+            $this->call(QuestionSeeder::class);
         }
 
     }

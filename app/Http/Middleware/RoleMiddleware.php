@@ -24,6 +24,6 @@ class RoleMiddleware
         }
 
         // Jika role tidak sesuai, arahkan ke halaman yang sesuai
-        return redirect()->route('landing');
+        return redirect()->route('landing')->with('error', 'You are not authorized to access this page.');;
     }
 }

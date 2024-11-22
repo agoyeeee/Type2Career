@@ -22,7 +22,7 @@
             </p>
             <p class="text-base text-gray-400">
                 <strong class="text-white">Langkah-langkah Mengikuti Tes:</strong><br>
-                1. Jawab Pertanyaan – Tes ini terdiri dari sekitar 60-100 pertanyaan singkat. Cukup pilih jawaban yang
+                1. Jawab Pertanyaan – Tes ini terdiri dari 40 pertanyaan singkat. Cukup pilih jawaban yang
                 paling menggambarkan diri Anda.<br>
                 2. Dapatkan Hasil – Setelah menyelesaikan tes, Anda akan langsung mendapatkan tipe kepribadian MBTI
                 Anda.<br>
@@ -43,7 +43,7 @@
     </div>
 
     <!-- Start Button Outside the Info Box -->
-    <a href="{{ route('quiz') }}"
+    <a href="{{ route('quiz.take') }}"
         class="inline-block px-6 py-1 text-lg font-bold text-white bg-purple-700 rounded-lg hover:bg-purple-500 transition duration-300 mt-5">
         Mulai
     </a>
