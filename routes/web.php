@@ -38,10 +38,9 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::controller(QuizController::class)->group(function () {
         Route::get('/quiz', 'takeQuiz')->name('quiz.take');
         Route::post('/quiz', 'submitQuiz')->name('quiz.submit');
+        Route::get('/hasil', 'showQuizResult')->name('quiz.result');
     });
 
-    // Quiz Result
-    Route::view('/hasil', '/landing/hasil')->name('hasil');
 });
 
 // Admin Routes (Role: Admin)

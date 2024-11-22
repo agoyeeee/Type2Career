@@ -4,10 +4,10 @@
 <!-- Personality Section -->
 <section class="flex flex-col items-center max-w-5xl w-full py-10">
     <div class="text-center mb-10">
-        <h2 class="text-5xl font-bold mb-4">INFJ</h2>
+        <!-- Menampilkan tipe MBTI user -->
+        <h2 class="text-5xl font-bold mb-4">{{ $mbtiType }}</h2>
         <p class="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Tipe kepribadian Anda berdasarkan hasil tes MBTI.
         </p>
     </div>
 
@@ -49,28 +49,13 @@
     <section class="text-center w-full">
         <h2 class="text-4xl font-bold mb-6">Job Recommendations</h2>
         <div class="flex flex-wrap gap-6 justify-center">
+            <!-- Tambahkan rekomendasi pekerjaan dinamis -->
             <div class="bg-gray-900 rounded-lg shadow-lg p-5 text-center w-60">
                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3c1d55c275f915c105869ce7e0861c23222878a5f80dcbaf47aee18bed3033d?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
                     alt="Job 1" class="w-20 h-20 rounded-full mx-auto mb-4" />
                 <h4 class="text-lg font-semibold">Job 1</h4>
                 <p class="text-gray-400 text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </div>
-            <div class="bg-gray-900 rounded-lg shadow-lg p-5 text-center w-60">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/22891d8dd4d9d071f30e4cb7123fe0af001dd07e3dbfb2ec5fb25f96b1417b04?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
-                    alt="Job 2" class="w-20 h-20 rounded-full mx-auto mb-4" />
-                <h4 class="text-lg font-semibold">Job 2</h4>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-            </div>
-            <div class="bg-gray-900 rounded-lg shadow-lg p-5 text-center w-60">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43463c1711c30a65a234678672ae3f4050a44bd773a2c72136bcc0027014323?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
-                    alt="Job 3" class="w-20 h-20 rounded-full mx-auto mb-4" />
-                <h4 class="text-lg font-semibold">Job 3</h4>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Rekomendasi pekerjaan sesuai tipe kepribadian {{ $mbtiType }}.
                 </p>
             </div>
         </div>

@@ -16,6 +16,26 @@ class QuizController extends Controller
         return view('landing/quiz', compact('questions'));
     }
 
+    public function showQuizResult()
+{
+    $user = auth()->user();
+
+    // Ambil hasil MBTI dari database berdasarkan user
+    $quizResult = QuizResult::where('user_id', $user->id)->latest()->first();
+
+    // Periksa apakah hasil kuis ditemukan
+    if (!$quizResult) {
+        return redirect()->route('quiz')->with('error', 'Hasil kuis tidak ditemukan. Silakan ambil kuis terlebih dahulu.');
+    }
+
+    // Kirim data ke view
+    return view('landing/hasil', [
+        'mbtiType' => $quizResult->mbti_type,
+        'quizResult' => $quizResult,
+    ]);
+}
+
+
     public function submitQuiz(Request $request)
     {
         $user = auth()->user();
