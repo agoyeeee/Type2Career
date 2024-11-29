@@ -66,7 +66,7 @@ class QuizController extends Controller
             'mbti_type' => $mbtiType,
         ]);
 
-        return redirect()->route('hasil');
+        return redirect()->route('quiz.result');
     }
 
     private function calculateMbtiType($responses)
@@ -92,9 +92,9 @@ class QuizController extends Controller
         // Pastikan kita hanya menghitung jika kunci ada di responses
         $question = Question::find($question_id);
         if ($question && isset($scores[$answer])) {
-            $dimension = $question->dimension; // Ambil dimensi MBTI dari pertanyaan
-            if (array_key_exists($dimension, $scoresByDimension)) {
-                $scoresByDimension[$dimension] += $scores[$answer];
+            $dimensi = $question->dimensi; // Ambil dimensi MBTI dari pertanyaan
+            if (array_key_exists($dimensi, $scoresByDimension)) {
+                $scoresByDimension[$dimensi] += $scores[$answer];
             }
         }
     }
