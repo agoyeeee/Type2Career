@@ -45,22 +45,22 @@
         </div>
     </div>
 
-     <!-- Job Recommendations -->
-    <section class="text-center w-full">
-        <h2 class="text-4xl font-bold mb-6">Job Recommendations</h2>
-        <div class="flex flex-wrap gap-6 justify-center">
-            <!-- Menampilkan rekomendasi pekerjaan dinamis -->
-            @foreach($jobRecommendations as $job)
-            <div class="bg-gray-900 rounded-lg shadow-lg p-5 text-center w-60">
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3c1d55c275f915c105869ce7e0861c23222878a5f80dcbaf47aee18bed3033d?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
-                    alt="Job" class="w-20 h-20 rounded-full mx-auto mb-4" />
-                <h4 class="text-lg font-semibold">{{ $job->job_title }}</h4>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    {{ $job->job_description }}
-                </p>
-            </div>
-            @endforeach
+<!-- Job Recommendations -->
+<section class="text-center w-full">
+    <h2 class="text-4xl font-bold mb-6">Job Recommendations</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+        <!-- Menampilkan rekomendasi pekerjaan dinamis -->
+        @foreach($jobRecommendations as $job)
+        <div class="bg-gray-900 rounded-lg shadow-lg p-5 text-center w-full sm:w-60 md:w-72 lg:w-80">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3c1d55c275f915c105869ce7e0861c23222878a5f80dcbaf47aee18bed3033d?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
+                alt="Job" class="w-20 h-20 rounded-full mx-auto mb-4" />
+            <h4 class="text-lg font-semibold">{{ $job->job_title }}</h4>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                {{ $job->job_description }}
+            </p>
         </div>
-    </section>
+        @endforeach
+    </div>
+</section>
 </section>
 @endsection

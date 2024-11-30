@@ -25,17 +25,15 @@
             </p>
 
             <!-- Take Test Button -->
-            <a href="{{ route('test') }}"
-                class="inline-block px-4 py-2 text-lg mt-5 font-semibold text-white rounded-md transition ease-in-out delay-150 bg-blue-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+            <button onclick="window.location.href='{{ route('test') }}'"
+                class="inline-block px-5 py-2 text-lg mt-3 font-semibold text-white rounded-md transition ease-in-out delay-150 bg-blue-700 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                 Take Test
-            </a>
+            </button>
+
         </div>
     </div>
 
-    <!-- Scroll to Top Button-->
-    <a class="fixed bottom-5 right-5 bg-gray-700 p-2 rounded-full text-white" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+
 </body>
 
 @endsection
