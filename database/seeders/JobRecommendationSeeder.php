@@ -11,104 +11,104 @@ class JobRecommendationSeeder extends Seeder
     {
         $jobRecommendations = [
             // ISTJ
-            ['mbti_type_id' => 1, 'job_title' => 'Accountant', 'job_description' => 'Responsible for financial records and compliance.'],
-            ['mbti_type_id' => 1, 'job_title' => 'Auditor', 'job_description' => 'Ensure accuracy and integrity of financial statements.'],
-            ['mbti_type_id' => 1, 'job_title' => 'Logistics Manager', 'job_description' => 'Manage supply chains and ensure timely delivery.'],
-            ['mbti_type_id' => 1, 'job_title' => 'Civil Engineer', 'job_description' => 'Design and supervise construction projects.'],
+            ['mbti_type_id' => 1, 'job_title' => 'Akuntan', 'job_description' => 'Bertanggung jawab atas catatan keuangan dan kepatuhan.'],
+            ['mbti_type_id' => 1, 'job_title' => 'Auditor', 'job_description' => 'Memastikan akurasi dan integritas laporan keuangan.'],
+            ['mbti_type_id' => 1, 'job_title' => 'Manajer Logistik', 'job_description' => 'Mengelola rantai pasokan dan memastikan pengiriman tepat waktu.'],
+            ['mbti_type_id' => 1, 'job_title' => 'Insinyur Sipil', 'job_description' => 'Merancang dan mengawasi proyek konstruksi.'],
 
             // ISFJ
-            ['mbti_type_id' => 2, 'job_title' => 'Nurse', 'job_description' => 'Provide patient care and medical assistance.'],
-            ['mbti_type_id' => 2, 'job_title' => 'Social Worker', 'job_description' => 'Support individuals and families in need.'],
-            ['mbti_type_id' => 2, 'job_title' => 'Librarian', 'job_description' => 'Manage library resources and assist patrons.'],
-            ['mbti_type_id' => 2, 'job_title' => 'Customer Service Representative', 'job_description' => 'Assist customers with inquiries and solutions.'],
+            ['mbti_type_id' => 2, 'job_title' => 'Perawat', 'job_description' => 'Memberikan perawatan pasien dan bantuan medis.'],
+            ['mbti_type_id' => 2, 'job_title' => 'Pekerja Sosial', 'job_description' => 'Mendukung individu dan keluarga yang membutuhkan.'],
+            ['mbti_type_id' => 2, 'job_title' => 'Pustakawan', 'job_description' => 'Mengelola sumber daya perpustakaan dan membantu pengunjung.'],
+            ['mbti_type_id' => 2, 'job_title' => 'Customer Service Representative', 'job_description' => 'Membantu pelanggan dengan pertanyaan dan solusi.'],
 
             // INFJ
-            ['mbti_type_id' => 3, 'job_title' => 'Counselor', 'job_description' => 'Help clients improve mental and emotional well-being.'],
-            ['mbti_type_id' => 3, 'job_title' => 'Psychologist', 'job_description' => 'Study and treat mental health issues.'],
-            ['mbti_type_id' => 3, 'job_title' => 'Writer', 'job_description' => 'Create compelling and meaningful written content.'],
-            ['mbti_type_id' => 3, 'job_title' => 'Humanitarian Worker', 'job_description' => 'Address social issues and provide community support.'],
+            ['mbti_type_id' => 3, 'job_title' => 'Konselor', 'job_description' => 'Membantu klien meningkatkan kesejahteraan mental dan emosional.'],
+            ['mbti_type_id' => 3, 'job_title' => 'Psikolog', 'job_description' => 'Mempelajari dan mengobati masalah kesehatan mental.'],
+            ['mbti_type_id' => 3, 'job_title' => 'Penulis', 'job_description' => 'Membuat konten tertulis yang menarik dan bermakna.'],
+            ['mbti_type_id' => 3, 'job_title' => 'Pekerja Kemanusiaan', 'job_description' => 'Menangani masalah sosial dan memberikan dukungan masyarakat.'],
 
             // INTJ
-            ['mbti_type_id' => 4, 'job_title' => 'Data Scientist', 'job_description' => 'Analyze data and provide actionable insights.'],
-            ['mbti_type_id' => 4, 'job_title' => 'Software Architect', 'job_description' => 'Design and oversee software systems.'],
-            ['mbti_type_id' => 4, 'job_title' => 'Strategic Planner', 'job_description' => 'Develop long-term business strategies.'],
-            ['mbti_type_id' => 4, 'job_title' => 'Investment Banker', 'job_description' => 'Provide financial advice and investment services.'],
+            ['mbti_type_id' => 4, 'job_title' => 'Data Scientist', 'job_description' => 'Menganalisis data dan memberikan wawasan yang dapat ditindaklanjuti.'],
+            ['mbti_type_id' => 4, 'job_title' => 'Arsitek Perangkat Lunak', 'job_description' => 'Merancang dan mengawasi sistem perangkat lunak.'],
+            ['mbti_type_id' => 4, 'job_title' => 'Perencana Strategis', 'job_description' => 'Mengembangkan strategi bisnis jangka panjang.'],
+            ['mbti_type_id' => 4, 'job_title' => 'Bankir Investasi', 'job_description' => 'Memberikan saran keuangan dan layanan investasi.'],
 
             // ISTP
-            ['mbti_type_id' => 5, 'job_title' => 'Mechanical Engineer', 'job_description' => 'Design and maintain mechanical systems.'],
-            ['mbti_type_id' => 5, 'job_title' => 'Pilot', 'job_description' => 'Operate and navigate aircraft.'],
-            ['mbti_type_id' => 5, 'job_title' => 'Forensic Scientist', 'job_description' => 'Investigate evidence for criminal cases.'],
-            ['mbti_type_id' => 5, 'job_title' => 'Carpenter', 'job_description' => 'Craft and repair wooden structures and furniture.'],
+            ['mbti_type_id' => 5, 'job_title' => 'Insinyur Mesin', 'job_description' => 'Merancang dan memelihara sistem mekanis.'],
+            ['mbti_type_id' => 5, 'job_title' => 'Pilot', 'job_description' => 'Mengoperasikan dan menavigasi pesawat.'],
+            ['mbti_type_id' => 5, 'job_title' => 'Ilmuwan Forensik', 'job_description' => 'Menyelidiki bukti untuk kasus kriminal.'],
+            ['mbti_type_id' => 5, 'job_title' => 'Tukang Kayu', 'job_description' => 'Membuat dan memperbaiki struktur kayu dan perabotan.'],
 
             // ISFP
-            ['mbti_type_id' => 6, 'job_title' => 'Graphic Designer', 'job_description' => 'Create visual content for various platforms.'],
-            ['mbti_type_id' => 6, 'job_title' => 'Chef', 'job_description' => 'Prepare and create innovative dishes.'],
-            ['mbti_type_id' => 6, 'job_title' => 'Musician', 'job_description' => 'Compose and perform music.'],
-            ['mbti_type_id' => 6, 'job_title' => 'Interior Designer', 'job_description' => 'Design aesthetically pleasing interior spaces.'],
+            ['mbti_type_id' => 6, 'job_title' => 'Desainer Grafis', 'job_description' => 'Membuat konten visual untuk berbagai platform.'],
+            ['mbti_type_id' => 6, 'job_title' => 'Koki', 'job_description' => 'Mempersiapkan dan menciptakan hidangan inovatif.'],
+            ['mbti_type_id' => 6, 'job_title' => 'Musisi', 'job_description' => 'Mengkomposisi dan menampilkan musik.'],
+            ['mbti_type_id' => 6, 'job_title' => 'Desainer Interior', 'job_description' => 'Merancang ruang interior yang indah.'],
 
             // INFP
-            ['mbti_type_id' => 7, 'job_title' => 'Writer', 'job_description' => 'Express ideas and stories through writing.'],
-            ['mbti_type_id' => 7, 'job_title' => 'Therapist', 'job_description' => 'Support clients through emotional challenges.'],
-            ['mbti_type_id' => 7, 'job_title' => 'Art Teacher', 'job_description' => 'Inspire students through artistic expression.'],
-            ['mbti_type_id' => 7, 'job_title' => 'Nonprofit Manager', 'job_description' => 'Lead organizations focused on social good.'],
+            ['mbti_type_id' => 7, 'job_title' => 'Penulis', 'job_description' => 'Mengekspresikan ide dan cerita melalui tulisan.'],
+            ['mbti_type_id' => 7, 'job_title' => 'Terapis', 'job_description' => 'Mendukung klien melalui tantangan emosional.'],
+            ['mbti_type_id' => 7, 'job_title' => 'Guru Seni', 'job_description' => 'Menginspirasi siswa melalui ekspresi seni.'],
+            ['mbti_type_id' => 7, 'job_title' => 'Manajer Nonprofit', 'job_description' => 'Memimpin organisasi yang fokus pada kebaikan sosial.'],
 
             // INTP
-            ['mbti_type_id' => 8, 'job_title' => 'Research Scientist', 'job_description' => 'Advance knowledge through scientific research.'],
-            ['mbti_type_id' => 8, 'job_title' => 'Software Developer', 'job_description' => 'Develop innovative software solutions.'],
-            ['mbti_type_id' => 8, 'job_title' => 'Philosopher', 'job_description' => 'Explore fundamental questions about existence.'],
-            ['mbti_type_id' => 8, 'job_title' => 'Mathematician', 'job_description' => 'Solve complex problems through mathematical theories.'],
+            ['mbti_type_id' => 8, 'job_title' => 'Ilmuwan Peneliti', 'job_description' => 'Memajukan pengetahuan melalui penelitian ilmiah.'],
+            ['mbti_type_id' => 8, 'job_title' => 'Pengembang Perangkat Lunak', 'job_description' => 'Mengembangkan solusi perangkat lunak yang inovatif.'],
+            ['mbti_type_id' => 8, 'job_title' => 'Filsuf', 'job_description' => 'Menyelidiki pertanyaan mendasar tentang eksistensi.'],
+            ['mbti_type_id' => 8, 'job_title' => 'Matematikawan', 'job_description' => 'Menyelesaikan masalah kompleks melalui teori matematika.'],
 
             // ESTP
-            ['mbti_type_id' => 9, 'job_title' => 'Sales Representative', 'job_description' => 'Build client relationships and drive revenue.'],
-            ['mbti_type_id' => 9, 'job_title' => 'Entrepreneur', 'job_description' => 'Start and manage successful business ventures.'],
-            ['mbti_type_id' => 9, 'job_title' => 'Athlete', 'job_description' => 'Compete professionally in sports.'],
-            ['mbti_type_id' => 9, 'job_title' => 'Event Coordinator', 'job_description' => 'Plan and execute large-scale events.'],
+            ['mbti_type_id' => 9, 'job_title' => 'Perwakilan Penjualan', 'job_description' => 'Membangun hubungan klien dan mendorong pendapatan.'],
+            ['mbti_type_id' => 9, 'job_title' => 'Pengusaha', 'job_description' => 'Memulai dan mengelola usaha bisnis yang sukses.'],
+            ['mbti_type_id' => 9, 'job_title' => 'Atlet', 'job_description' => 'Bersaing secara profesional di bidang olahraga.'],
+            ['mbti_type_id' => 9, 'job_title' => 'Koordinator Acara', 'job_description' => 'Merencanakan dan mengeksekusi acara berskala besar.'],
 
             // ESFP
-            ['mbti_type_id' => 10, 'job_title' => 'Actor', 'job_description' => 'Perform roles in theater, film, or television.'],
-            ['mbti_type_id' => 10, 'job_title' => 'Tour Guide', 'job_description' => 'Lead engaging tours for visitors.'],
-            ['mbti_type_id' => 10, 'job_title' => 'Public Relations Specialist', 'job_description' => 'Manage public image and media relations.'],
-            ['mbti_type_id' => 10, 'job_title' => 'Dancer', 'job_description' => 'Perform expressive and artistic dance routines.'],
+            ['mbti_type_id' => 10, 'job_title' => 'Aktor', 'job_description' => 'Memerankan peran di teater, film, atau televisi.'],
+            ['mbti_type_id' => 10, 'job_title' => 'Pemandu Wisata', 'job_description' => 'Memimpin tur yang menarik untuk pengunjung.'],
+            ['mbti_type_id' => 10, 'job_title' => 'Spesialis Hubungan Masyarakat', 'job_description' => 'Mengelola citra publik dan hubungan media.'],
+            ['mbti_type_id' => 10, 'job_title' => 'Penari', 'job_description' => 'Menampilkan tarian ekspresif dan artistik.'],
 
             // ENFP
-            ['mbti_type_id' => 11, 'job_title' => 'Marketing Specialist', 'job_description' => 'Develop creative marketing campaigns.'],
-            ['mbti_type_id' => 11, 'job_title' => 'Journalist', 'job_description' => 'Investigate and report current events.'],
-            ['mbti_type_id' => 11, 'job_title' => 'Life Coach', 'job_description' => 'Guide clients toward personal development.'],
-            ['mbti_type_id' => 11, 'job_title' => 'Content Creator', 'job_description' => 'Produce and share engaging digital content.'],
+            ['mbti_type_id' => 11, 'job_title' => 'Spesialis Pemasaran', 'job_description' => 'Mengembangkan kampanye pemasaran kreatif.'],
+            ['mbti_type_id' => 11, 'job_title' => 'Jurnalis', 'job_description' => 'Menyelidiki dan melaporkan kejadian terkini.'],
+            ['mbti_type_id' => 11, 'job_title' => 'Pelatih Kehidupan', 'job_description' => 'Mengarahkan klien menuju pengembangan pribadi.'],
+            ['mbti_type_id' => 11, 'job_title' => 'Pembuat Konten', 'job_description' => 'Membuat dan berbagi konten digital yang menarik.'],
 
             // ENTP
-            ['mbti_type_id' => 12, 'job_title' => 'Entrepreneur', 'job_description' => 'Build and lead innovative startups.'],
-            ['mbti_type_id' => 12, 'job_title' => 'Consultant', 'job_description' => 'Advise organizations on various challenges.'],
-            ['mbti_type_id' => 12, 'job_title' => 'Advertising Executive', 'job_description' => 'Create impactful ad campaigns for brands.'],
-            ['mbti_type_id' => 12, 'job_title' => 'Innovator', 'job_description' => 'Develop new products and technologies.'],
+            ['mbti_type_id' => 12, 'job_title' => 'Pengusaha', 'job_description' => 'Membangun dan memimpin startup inovatif.'],
+            ['mbti_type_id' => 12, 'job_title' => 'Konsultan', 'job_description' => 'Memberikan saran kepada organisasi tentang berbagai tantangan.'],
+            ['mbti_type_id' => 12, 'job_title' => 'Eksekutif Periklanan', 'job_description' => 'Membuat kampanye iklan yang berdampak untuk merek.'],
+            ['mbti_type_id' => 12, 'job_title' => 'Inovator', 'job_description' => 'Menciptakan solusi baru untuk masalah yang ada.'],
 
             // ESTJ
-            ['mbti_type_id' => 13, 'job_title' => 'Operations Manager', 'job_description' => 'Ensure efficiency in organizational operations.'],
-            ['mbti_type_id' => 13, 'job_title' => 'Police Officer', 'job_description' => 'Maintain public safety and enforce laws.'],
-            ['mbti_type_id' => 13, 'job_title' => 'Judge', 'job_description' => 'Preside over legal proceedings.'],
-            ['mbti_type_id' => 13, 'job_title' => 'Military Officer', 'job_description' => 'Lead and organize military operations.'],
+            ['mbti_type_id' => 13, 'job_title' => 'Manajer Proyek', 'job_description' => 'Memimpin proyek dari awal hingga selesai, memastikan efisiensi dan penyelesaian tepat waktu.'],
+            ['mbti_type_id' => 13, 'job_title' => 'Manajer Operasional', 'job_description' => 'Mengawasi kegiatan operasional sehari-hari.'],
+            ['mbti_type_id' => 13, 'job_title' => 'Manajer SDM', 'job_description' => 'Mengelola perekrutan, pelatihan, dan kesejahteraan karyawan.'],
+            ['mbti_type_id' => 13, 'job_title' => 'Insinyur Perangkat Lunak', 'job_description' => 'Merancang dan mengembangkan sistem perangkat lunak.'],
 
             // ESFJ
-            ['mbti_type_id' => 14, 'job_title' => 'Teacher', 'job_description' => 'Educate and inspire students.'],
-            ['mbti_type_id' => 14, 'job_title' => 'Event Planner', 'job_description' => 'Coordinate and execute memorable events.'],
-            ['mbti_type_id' => 14, 'job_title' => 'Healthcare Administrator', 'job_description' => 'Oversee healthcare operations and services.'],
-            ['mbti_type_id' => 14, 'job_title' => 'Public Health Specialist', 'job_description' => 'Promote community health and wellness.'],
+            ['mbti_type_id' => 14, 'job_title' => 'Pengelola Acara', 'job_description' => 'Menyelenggarakan dan mengelola berbagai acara dan konferensi.'],
+            ['mbti_type_id' => 14, 'job_title' => 'Guru', 'job_description' => 'Mengajar siswa di berbagai tingkat pendidikan.'],
+            ['mbti_type_id' => 14, 'job_title' => 'Petugas Layanan Pelanggan', 'job_description' => 'Menyediakan dukungan pelanggan yang responsif dan berkualitas tinggi.'],
+            ['mbti_type_id' => 14, 'job_title' => 'Pekerja Sosial', 'job_description' => 'Mendukung individu dan keluarga yang menghadapi tantangan hidup.'],
 
             // ENFJ
-            ['mbti_type_id' => 15, 'job_title' => 'Human Resources Manager', 'job_description' => 'Develop workplace culture and employee satisfaction.'],
-            ['mbti_type_id' => 15, 'job_title' => 'Motivational Speaker', 'job_description' => 'Inspire and empower audiences through speeches.'],
-            ['mbti_type_id' => 15, 'job_title' => 'Diplomat', 'job_description' => 'Foster international relations and negotiations.'],
-            ['mbti_type_id' => 15, 'job_title' => 'Nonprofit Director', 'job_description' => 'Lead initiatives for social impact.'],
+            ['mbti_type_id' => 15, 'job_title' => 'Pelatih Kepemimpinan', 'job_description' => 'Mengembangkan kemampuan kepemimpinan dalam individu dan organisasi.'],
+            ['mbti_type_id' => 15, 'job_title' => 'Konselor Karir', 'job_description' => 'Memberikan saran dan dukungan untuk perkembangan karir.'],
+            ['mbti_type_id' => 15, 'job_title' => 'Pengusaha Sosial', 'job_description' => 'Membangun organisasi yang berfokus pada solusi sosial.'],
+            ['mbti_type_id' => 15, 'job_title' => 'Pembicara Motivasi', 'job_description' => 'Memberikan ceramah yang menginspirasi dan mendorong tindakan.'],
 
             // ENTJ
-            ['mbti_type_id' => 16, 'job_title' => 'CEO', 'job_description' => 'Lead organizations toward success and innovation.'],
-            ['mbti_type_id' => 16, 'job_title' => 'Business Consultant', 'job_description' => 'Advise companies on strategic growth.'],
-            ['mbti_type_id' => 16, 'job_title' => 'Lawyer', 'job_description' => 'Represent clients and handle legal cases.'],
-            ['mbti_type_id' => 16, 'job_title' => 'Corporate Executive', 'job_description' => 'Manage high-level decision-making in corporations.'],
+            ['mbti_type_id' => 16, 'job_title' => 'CEO', 'job_description' => 'Memimpin perusahaan dan menentukan arah strategisnya.'],
+            ['mbti_type_id' => 16, 'job_title' => 'Manajer Umum', 'job_description' => 'Mengawasi seluruh operasi bisnis dan membuat keputusan utama.'],
+            ['mbti_type_id' => 16, 'job_title' => 'Konsultan Strategis', 'job_description' => 'Memberikan solusi strategis kepada perusahaan besar.'],
+            ['mbti_type_id' => 16, 'job_title' => 'Direktur Pemasaran', 'job_description' => 'Memimpin tim pemasaran untuk mengembangkan dan melaksanakan strategi pemasaran.']
         ];
 
-        foreach ($jobRecommendations as $recommendation) {
-            JobRecommendation::create($recommendation);
+        foreach ($jobRecommendations as $jobRecommendation) {
+            JobRecommendation::create($jobRecommendation);
         }
     }
 }

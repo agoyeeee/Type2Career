@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\QuizResponse;
+use App\Models\JobRecommendation;
+use App\Models\MBTIType;
 use App\Models\QuizResult;
 use App\Models\Question;
 use Illuminate\Http\Request;
@@ -61,12 +63,30 @@ class QuizController extends Controller
         $mbtiType = $this->calculateMbtiType($responses);
 
         // Simpan hasil kuis
-        QuizResult::create([
+        $quizResult = QuizResult::create([
             'user_id' => $user->id,
             'mbti_type' => $mbtiType,
         ]);
 
-        return redirect()->route('quiz.result');
+        // return redirect()->route('quiz.result');
+
+        // Ambil MBTIType berdasarkan tipe MBTI
+        $mbtiTypeModel = MBTIType::where('type_code', $mbtiType)->first();
+
+        if ($mbtiTypeModel) {
+            // Ambil rekomendasi pekerjaan berdasarkan mbti_type_id
+            $jobRecommendations = JobRecommendation::where('mbti_type_id', $mbtiTypeModel->id)->get();
+        } else {
+            // Jika tidak ada tipe MBTI yang cocok, set jobRecommendations ke array kosong
+            $jobRecommendations = [];
+        }
+
+        // Kirim data ke view
+        return view('landing/hasil', [
+            'mbtiType' => $mbtiType,
+            'quizResult' => $quizResult,
+            'jobRecommendations' => $jobRecommendations,  // Menambahkan rekomendasi pekerjaan
+        ]);
     }
 
     private function calculateMbtiType($responses)
