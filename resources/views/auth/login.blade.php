@@ -75,7 +75,19 @@
           </x-primary-button>
         </div>
       </form>
+
+      <!-- Register Button -->
+      <div class="mt-7 text-center">
+        <p class="text-sm text-gray-400">Don't have an account?</p>
+        <a
+          href="{{ route('register') }}"
+          class="mt-2 inline-block text-blue-400 hover:text-blue-600 text-sm font-semibold"
+        >
+          {{ __('Register here') }}
+        </a>
+      </div>
     </div>
+
     <div class="absolute bottom-5 right-5">
       <img
         alt="A futuristic smartphone with a sleek design and vibrant colors"

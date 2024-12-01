@@ -23,7 +23,7 @@
         <!-- Team Member Card -->
         <div class="bg-gray-900 shadow-lg rounded-lg p-5 flex flex-col items-center w-48 text-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f31570eee62bd982be626d2b2c34a9dd4701c059a42386deed93cbace17d348?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
+            src="{{ asset('assets/yoga.jpg') }}"
             alt="M. Prayoga Putra S"
             class="w-24 h-24 rounded-full mb-4 object-cover"
           />
@@ -33,7 +33,7 @@
 
         <div class="bg-gray-900 shadow-lg rounded-lg p-5 flex flex-col items-center w-48 text-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/06083c8ec8c11ea56a1cef773e6db3ec4006cb34c6a5d9ff15e9b662350b17fe?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
+            src="{{ asset('assets/isna.jpg') }}"
             alt="Isnaini Nur Fadhilah"
             class="w-24 h-24 rounded-full mb-4 object-cover"
           />
@@ -43,7 +43,7 @@
 
         <div class="bg-gray-900 shadow-lg rounded-lg p-5 flex flex-col items-center w-48 text-center">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/06083c8ec8c11ea56a1cef773e6db3ec4006cb34c6a5d9ff15e9b662350b17fe?placeholderIfAbsent=true&apiKey=d95a0cee8ce84bfc9d5346e2cc150f38"
+            src="{{ asset('assets/erwan.jpg') }}"
             alt="Erwan Rahmansyah"
             class="w-24 h-24 rounded-full mb-4 object-cover"
           />

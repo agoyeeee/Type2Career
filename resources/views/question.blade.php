@@ -21,10 +21,10 @@
                     <label for="dimensi">Dimensi Kepribadian MBTI</label>
                     <select name="dimensi" class="form-control" id="dimensi" required>
                         <option value="" disabled selected>Pilih dimensi kepribadian</option>
-                        <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
-                        <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
-                        <option value="Thinking (T)- Feeling (F)">Thinking (T) / Feeling (F)</option>
-                        <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
+                        <option value="E/I">E/I</option>
+                        <option value="S/N">S/N</option>
+                        <option value="T/F">T/F</option>
+                        <option value="J/P">J/P</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary mt-3">Simpan</button>
@@ -85,10 +85,10 @@
                         <div class="form-group">
                             <label for="editDimensi">Dimensi</label>
                             <select name="dimensi" class="form-control" id="editDimensi" required>
-                                <option value="Ekstrovert (E) - Introvert (I)">Ekstrovert (E) / Introvert (I)</option>
-                                <option value="Sensing (S) - Intuitive (N)">Sensing (S) / Intuitive (N)</option>
-                                <option value="Thinking (T)- Feeling (F)">Thinking (T) / Feeling (F)</option>
-                                <option value="Judging (J) - Perceiving (P)">Judging (J) / Perceiving (P)</option>
+                                <option value="E/I">E/I</option>
+                                <option value="S/N">S/N</option>
+                                <option value="T/F">T/F</option>
+                                <option value="J/P">J/P</option>
                             </select>
                         </div>
                     </div>
@@ -103,7 +103,6 @@
 </div>
 @endsection
 
-@section('scripts')
 <script>
     function openEditModal(id, pertanyaan, dimensi) {
         document.getElementById('editPertanyaan').value = pertanyaan;
@@ -112,4 +111,5 @@
         $('#editPertanyaanModal').modal('show');
     }
 </script>
+@section('scripts')
 @endsection

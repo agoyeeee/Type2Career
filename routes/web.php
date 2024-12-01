@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -12,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('/landing/landing');
 })->name('landing');
-
-// Authentication Routes
-Route::controller(LoginController::class)->group(function () {
-    Route::get('/login', 'showLoginForm')->name('login');
-    Route::post('/login', 'login');
-    Route::post('/logout', 'logout')->name('logout');
-});
 
 // Profile Routes (Authenticated Users)
 Route::middleware('auth')->controller(ProfileController::class)->group(function () {
@@ -40,7 +34,6 @@ Route::middleware(['auth', 'role:user'])->group(function () {
         Route::post('/quiz', 'submitQuiz')->name('quiz.submit');
         Route::get('/hasil', 'showQuizResult')->name('quiz.result');
     });
-
 });
 
 // Admin Routes (Role: Admin)
@@ -62,6 +55,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::post('/job', 'store')->name('job.store');
         Route::put('/job/{job}', 'update')->name('job.update');
         Route::delete('/job/{job}', 'destroy')->name('job.destroy');
+    });
+
+    // User Management (Menambahkan routes untuk CRUD User)
+    Route::controller(UserController::class)->group(function () {
+        Route::get('/users', 'index')->name('users.index'); // Menampilkan daftar pengguna
+        Route::post('/users', 'store')->name('users.store'); // Menambahkan pengguna baru
+        Route::put('/users/{user}', 'update')->name('users.update'); // Memperbarui pengguna
+        Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Menghapus pengguna
     });
 });
 

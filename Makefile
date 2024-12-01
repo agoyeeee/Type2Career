@@ -6,4 +6,4 @@ migrate:
 	php artisan migrate:fresh --seed
 
 cln:
-	php artisan optimize
+	php artisan optimize:clear
