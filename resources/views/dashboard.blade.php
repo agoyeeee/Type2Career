@@ -33,41 +33,43 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Questions</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $questionsCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-question-circle fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Job Recommendations</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $jobsCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-briefcase fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Users</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $usersCount }}</div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>

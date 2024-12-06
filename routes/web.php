@@ -60,9 +60,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     // User Management (Menambahkan routes untuk CRUD User)
     Route::controller(UserController::class)->group(function () {
         Route::get('/users', 'index')->name('users.index'); // Menampilkan daftar pengguna
-        Route::post('/users', 'store')->name('users.store'); // Menambahkan pengguna baru
-        Route::put('/users/{user}', 'update')->name('users.update'); // Memperbarui pengguna
-        Route::delete('/users/{user}', 'destroy')->name('users.destroy'); // Menghapus pengguna
     });
 });
 
