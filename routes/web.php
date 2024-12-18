@@ -63,5 +63,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     });
 });
 
+Auth::routes(['verify'=> true]);
+
 // Authentication Routes (from Laravel Breeze or Fortify)
 require __DIR__ . '/auth.php';

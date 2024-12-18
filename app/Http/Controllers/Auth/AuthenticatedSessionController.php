@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Rules\Captcha;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -24,6 +25,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // Validasi captcha terlebih dahulu
+        $request->validate([
+            'g-recaptcha-response' => ['required', new Captcha()]
+        ]);
+
         $request->authenticate();
 
         $request->session()->regenerate();
