@@ -63,6 +63,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     });
 });
 
+Route::get('/database/export', [AdminDashboardController::class, 'export'])->name('database.export');
+Route::post('/database/import', [AdminDashboardController::class, 'import'])->name('database.import');
+
 Auth::routes(['verify'=> true]);
 
 // Authentication Routes (from Laravel Breeze or Fortify)
