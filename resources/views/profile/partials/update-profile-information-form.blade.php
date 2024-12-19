@@ -47,6 +47,37 @@
             @endif
         </div>
 
+        <div class="mt-6">
+            <x-input-label for="mbti_type" :value="__('MBTI Type')" class="text-white" />
+            <div class="mt-1 p-3 block w-full rounded-md border-gray-300 bg-gray-700 text-white"
+                 x-data="{ mbtiType: '' }"
+                 x-init="
+                    fetch('{{ route('profile.mbti') }}', {
+                        headers: {
+                            'Authorization': 'Bearer {{ $token }}'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        mbtiType = data.mbti_type || 'Belum ada hasil MBTI'
+                    })
+                    .catch(error => {
+                        mbtiType = 'Belum ada hasil MBTI'
+                    })
+                 "
+                 x-text="mbtiType"
+            >
+                @if($user->quizResult)
+                    {{ $user->quizResult->mbti_type }}
+                @else
+                    {{ __('Belum ada hasil MBTI') }}
+                @endif
+            </div>
+            <p class="mt-2 text-sm text-gray-400">
+                {{ __('* MBTI Type akan terisi otomatis setelah Anda menyelesaikan tes MBTI') }}
+            </p>
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
